@@ -3,6 +3,7 @@
 /* eslint-disable react/jsx-indent */
 /* eslint-disable jsx-quotes */
 import React from 'react';
+import PropTypes from 'prop-types';
 import "../assets/styles/components/carouselItem.scss";
 import playIcon from "../assets/images/ico-play.png";
 import plusIcon from "../assets/images/ico-add.png";
@@ -22,5 +23,13 @@ const CarouselItem = ({ cover, title, year, contentRating, duration }) => (
         </div>
     </div>
 );
+
+CarouselItem.propTypes = {
+  cover: PropTypes.string,
+  title: PropTypes.string,
+  year: PropTypes.number,
+  contentRating: PropTypes.string,
+  duration: PropTypes.number,
+}
 
 export default CarouselItem;
